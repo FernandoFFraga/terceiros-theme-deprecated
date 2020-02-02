@@ -1,2 +1,11 @@
 # terceiros-theme
-Pacote de assets para a criação de sites
+
+##Objetivo
+
+Este é um pacote de assets desenvolvido para auxiliar na criação e desenvolvimento de painéis administrativos.
+
+
+##Assets
+
+###Calendário
+###Caixas
