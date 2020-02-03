@@ -49,6 +49,6 @@ Para quaisquer ajustes de CSS devem ser usadas as classes:
 
 | Edição | Classe |
 |--------|--------|
-| Mudar estilo do sufix    | .calendario-sufix |
-| Mudar estilo do prefix   | .calendario-prefix |
-| Mudar estilo do destaque | .calendario-destaque | 
+| Mudar estilo do sufix    | **.calendario-sufix** |
+| Mudar estilo do prefix   | **.calendario-prefix** |
+| Mudar estilo do destaque | **.calendario-destaque** | 
