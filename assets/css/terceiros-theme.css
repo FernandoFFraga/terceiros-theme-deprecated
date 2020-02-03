@@ -1,0 +1,49 @@
+/* Fontes */
+
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700&display=swap');
+
+/* [x] Fontes */
+
+/* Variaveis */
+:root {
+	--calendario-destaque-bg: #ff6600;
+	--calendario-destaque-cor: #ffffff;
+}
+
+/* [x] Variaveis */
+
+/* Estilos do Calendário */
+
+.calendario-table{
+	width: 100%;
+	font-family: 'Inconsolata', arial, sans-serif;
+	background-color: #fff;
+	border-collapse: collapse;
+}
+
+.calendario-table th{
+	border: solid 1px #dee2e6;
+	border-bottom-width: 2px;
+	text-align: center;
+	padding: 15px 0;
+}
+
+.calendario-table td{
+	text-align: center;
+	vertical-align: middle;
+	padding: 15px 0;
+	border: solid 1px #dee2e6;
+}
+
+.calendario-prefix, .calendario-sufix{
+	background-color: #f1f1f1;
+}
+
+.calendario-destaque{
+	background-color: var(--calendario-destaque-bg);
+	color: var(--calendario-destaque-cor);
+	border: solid 1px rgba(0,0,0,.2) !important;
+	text-shadow: 1px 1px 2px rgba(0,0,0,.3);
+}
+
+/* [X] Estilos do Calendário */
