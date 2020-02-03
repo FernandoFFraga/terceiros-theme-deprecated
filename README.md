@@ -22,7 +22,7 @@ require_once('assets/obj/calendario.php');
 * Mês (Para usar o mês atual use o valor 0 [int])
 * Ano (Para usar o ano atual use o valor 0 [int])
 
-#### Uso
+#### Criação do objeto
 
 ```php
 $array_destaques = [1, 2, 3]; //Dias que serão destacados
@@ -31,3 +31,19 @@ $ano = 2020;
 
 $calendario = new Calendario([$array_destaques], $mes, $ano);
 ```
+
+#### Uso no HTML
+Para o uso final basta dar echo na váriavel DOM do objeto criado anteriormente:
+
+```php
+echo $calendario->DOM;
+```
+
+### Informações adicionais
+Para quaisquer ajustes de CSS devem ser usadas as classes:
+
+| Edição | Classe |
+|--------|--------|
+| Mudar estilo do sufix    | .calendario-sufix |
+| Mudar estilo do prefix   | .calendario-prefix |
+| Mudar estilo do destaque | .calendario-destaque | 
