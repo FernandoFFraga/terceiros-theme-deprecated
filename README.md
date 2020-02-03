@@ -5,12 +5,17 @@
 Este é um pacote de assets desenvolvido para auxiliar na criação e desenvolvimento de painéis administrativos.
 
 ## Iniciar
-É necessário importar o objeto desejado e linkar com o css geral (terceiros-theme.css)
+É necessário importar o objeto desejado
 
 ```php
 require_once('assets/obj/calendario.php');
 ```
 
+E também é necessário linkar o arquivo de estilo
+
+```html
+<link rel="stylesheet" href="assets/css/terceiros-theme.css">
+```
 ## Assets
 
 ### Calendário
