@@ -46,9 +46,21 @@ Para quaisquer ajustes de CSS devem ser usadas as classes:
 | Mudar estilo do destaque | **.calendario-destaque** |
 
 ## Mecânismo de busca
-Para utilizar o script de busca é necessário importar os arquivos **jquery.min.js** e **busca.js** no final do elemento *<body>* :
+Para utilizar o script de busca é necessário importar os arquivos **jquery.min.js** e **busca.js**:
 
 ```html
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/busca.js"></script>
 ```
+
+## Funcionamento
+O funcionamento do mecânismo permite dois tipos de busca em um mesmo input (Por dados que contenham números, e por dados que contenham letras), podendo assim por exemplo servir para buscar um CPF ao digitar números, e buscar nomes ao digitar letras.
+
+## Criação da tabela
+A busca necessita que os dados estejam dentro de uma tabela, onde as colunas representam as categorias a serem procuradas.
+
+Classes para definir o alvo das buscas:
+| Alvo | Classe |
+|------|--------|
+| Números    | **.busca-numero** |
+| Letras   | **.busca-letra** |
