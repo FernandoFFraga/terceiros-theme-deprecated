@@ -1,11 +1,3 @@
-<?php
-
-	require_once('assets/obj/calendario.php');
-	$calendario = new Calendario([1, 2, 3], 1, 2019);
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -14,15 +6,26 @@
 	<link rel="stylesheet" href="assets/css/terceiros-theme.css">
 </head>
 <body>
-	<style>
-		.controle{
-			width: 400px;
-			min-height: 400px;
-			
-		}
-	</style>
-	<div class="controle">
-		<?php echo $calendario->DOM; ?>
-	</div>
+<input type="text" id="input-busca">
+<table>
+	<thead>
+		<th>Código</th>
+		<th>Nome</th>
+	</thead>
+	<tr>
+		<td class="busca-numero">1</td>
+		<td class="busca-letra">Ana</td>
+	</tr>
+	<tr>
+		<td class="busca-numero">2</td>
+		<td class="busca-letra">Maria</td>
+	</tr>
+	<tr>
+		<td class="busca-numero">3</td>
+		<td class="busca-letra">João</td>
+	</tr>
+</table>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/busca.js"></script>
 </body>
 </html>
