@@ -19,9 +19,6 @@ E também é necessário linkar o arquivo de estilo
 ## Assets
 
 ### Calendário
-
-#### Informações
-
 É necessário de passar 3 valores na criação do objeto:
 * Dias para destaques (Devem ser passados dentro de um array de inteiros)
 * Mês (Para usar o mês atual use o valor 0 [int])
@@ -51,4 +48,6 @@ Para quaisquer ajustes de CSS devem ser usadas as classes:
 |--------|--------|
 | Mudar estilo do sufix    | **.calendario-sufix** |
 | Mudar estilo do prefix   | **.calendario-prefix** |
-| Mudar estilo do destaque | **.calendario-destaque** | 
+| Mudar estilo do destaque | **.calendario-destaque** |
+
+### Mecânismo de busca
