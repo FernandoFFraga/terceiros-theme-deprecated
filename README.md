@@ -66,8 +66,6 @@ Classes para definir o alvo das buscas:
 | Letras | **td.busca-letra** |
 
 #### Exemplo:
-
-Código
 ```html
 <table>
 	<thead>
@@ -88,7 +86,6 @@ Código
 	</tr>
 </table>
 ```
-Resultado
 | Código | Nome |
 |--------|------|
 | 1 | Ana |
