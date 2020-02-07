@@ -46,7 +46,7 @@ Para quaisquer ajustes de CSS devem ser usadas as classes:
 | Mudar estilo do destaque | **.calendario-destaque** |
 
 ## Mecânismo de busca
-Para utilizar o script de busca é necessário importar os arquivos **jquery.min.js** e **busca.js** no final do elemento <body> :
+Para utilizar o script de busca é necessário importar os arquivos **jquery.min.js** e **busca.js** no final do elemento *<body>* :
 
 ```html
 <script src="assets/js/jquery.min.js"></script>
