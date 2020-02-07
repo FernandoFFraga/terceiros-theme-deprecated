@@ -54,7 +54,7 @@ Para utilizar o script de busca é necessário importar os arquivos **jquery.min
 ```
 
 ## Funcionamento
-O funcionamento do mecânismo permite dois tipos de busca em um mesmo input (Por dados que contenham números, e por dados que contenham letras), podendo assim por exemplo servir para buscar um CPF ao digitar números, e buscar nomes ao digitar letras.
+O funcionamento do mecânismo permite dois tipos de busca em um mesmo input (Por dados que contenham **números** e por dados que contenham **letras**), podendo assim por exemplo servir para buscar um CPF ao digitar números, e buscar nomes ao digitar letras.
 
 ## Criação da tabela
 A busca necessita que os dados estejam dentro de uma tabela, onde as colunas representam as categorias a serem procuradas.
@@ -62,5 +62,35 @@ A busca necessita que os dados estejam dentro de uma tabela, onde as colunas rep
 Classes para definir o alvo das buscas:
 | Alvo | Classe |
 |------|--------|
-| Números    | **.busca-numero** |
-| Letras   | **.busca-letra** |
+| Números | **td.busca-numero** |
+| Letras | **td.busca-letra** |
+
+### Exemplo
+
+Código:
+```html
+	<table>
+		<thead>
+			<th>Código</th>
+			<th>Nome</th>
+		</thead>
+		<tr>
+			<td class="busca-numero">1</td>  <!-- Busca numérica -->
+			<td class="busca-letra">Ana</td> <!-- Busca alfa -->
+		</tr>
+		<tr>
+			<td class="busca-numero">2</td>
+			<td class="busca-letra">Maria</td>
+		</tr>
+		<tr>
+			<td class="busca-numero">3</td>
+			<td class="busca-letra">João</td>
+		</tr>
+	</table>
+```
+Resultado:
+| Código | Nome |
+|--------|------|
+| 1 | Ana |
+| 2 | Maria |
+| 3 | João |
