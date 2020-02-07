@@ -39,7 +39,7 @@ Para o uso final basta dar echo na váriavel DOM do objeto criado anteriormente:
 echo $calendario->DOM;
 ```
 
-## Informações adicionais
+### Informações adicionais
 Para quaisquer ajustes de CSS devem ser usadas as classes:
 
 | Edição | Classe |
@@ -49,3 +49,12 @@ Para quaisquer ajustes de CSS devem ser usadas as classes:
 | Mudar estilo do destaque | **.calendario-destaque** |
 
 ## Mecânismo de busca
+Para utilizar o script de busca é necessário exportar o arquivo busca.js no final do elemento body
+
+```html
+...
+
+<script src='assets/js/busca.js'></script>
+</body>
+</html>
+```
