@@ -2,21 +2,18 @@
 
 Este é um pacote de assets desenvolvido para auxiliar na criação e desenvolvimento de painéis administrativos.
 
-# Iniciar
+# Assets
 
-É necessário importar o objeto desejado
+## Calendário
+Para utilizar o calendário é necessário importar o objeto desejado:
 ```php
 require_once('assets/obj/calendario.php');
 ```
 
-
-E também é necessário linkar o arquivo de estilo
+E também é necessário linkar o arquivo de estilo:
 ```html
 <link rel="stylesheet" href="assets/css/terceiros-theme.css">
 ```
-# Assets
-
-## Calendário
 É necessário de passar 3 valores na criação do objeto:
 * Dias para destaques (Devem ser passados dentro de um array de inteiros)
 * Mês (Para usar o mês atual use o valor 0 [int])
@@ -49,7 +46,7 @@ Para quaisquer ajustes de CSS devem ser usadas as classes:
 | Mudar estilo do destaque | **.calendario-destaque** |
 
 ## Mecânismo de busca
-Para utilizar o script de busca é necessário importar os arquivos jquery.min.js e busca.js no final do elemento <body> :
+Para utilizar o script de busca é necessário importar os arquivos **jquery.min.js** e **busca.js** no final do elemento <body> :
 
 ```html
 <script src="assets/js/jquery.min.js"></script>
