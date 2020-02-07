@@ -103,6 +103,3 @@ O input de busca pode estar em qualquer lugar da página desde que possua o id #
 
 ### Limitação
 A limitação desse script é só poder ser usado **uma** vez por página, mas como todos os outros assets pode ser customizado de acordo com a necessidade do programador.
-
-### Resultado
-Quando o usuário final inserir qualquer caractere no input de busca o script irá esconder os elementos que não possuem o referido.
