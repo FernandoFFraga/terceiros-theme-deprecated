@@ -4,5 +4,5 @@ Este é um pacote de assets desenvolvido para auxiliar na criação e desenvolvi
 
 # Assets
 
-## [Calendário](docs/calendario.md)
-## [Mecânismo de busca](docs/busca.md)
+#### [Calendário](docs/calendario.md)
+#### [Mecânismo de busca](docs/busca.md)
