@@ -38,3 +38,5 @@ Para quaisquer ajustes de CSS devem ser usadas as classes:
 | Mudar estilo do sufix    | **.calendario-sufix** |
 | Mudar estilo do prefix   | **.calendario-prefix** |
 | Mudar estilo do destaque | **.calendario-destaque** |
+
+As cores também podem ser modificadas editando as variáveis do css principal **terceiros-theme.css**. Obs: Modificando essas variáveis outros módulos também serão alterados.

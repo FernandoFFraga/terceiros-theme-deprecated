@@ -6,3 +6,4 @@ Este é um pacote de assets desenvolvido para auxiliar na criação e desenvolvi
 
 * [Calendário](docs/calendario.md)
 * [Mecânismo de busca](docs/busca.md)
+* [Caixas de interface](docs/caixa.md)
