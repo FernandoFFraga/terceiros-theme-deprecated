@@ -1,4 +1,4 @@
-#Mecânismo de busca
+# Mecânismo de busca
 
 Para utilizar o script de busca é necessário importar os arquivos **jquery.min.js** e **busca.js**:
 
