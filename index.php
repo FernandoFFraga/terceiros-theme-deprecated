@@ -10,9 +10,11 @@ $conteudo = ["Cerveja|32", "Refrigerante|50"]; //Duas linhas com duas células
 $conteudo['th'] = "Produto|Estoque";
 
 
-
-$cont['link'] = "https://www.google.com";
-$cont['text'] = "ACESSAR";
+$cont = array(
+	"link" => "https://google.com",
+	"text" => "Acessar Google",
+	"blank" => true, 
+);
 
 $caixa->fillBody($tipo, $conteudo);
 $caixa->fillFooter('2', $cont);

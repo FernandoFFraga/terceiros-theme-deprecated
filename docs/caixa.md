@@ -102,10 +102,20 @@ Esse tipo é usado para criar uma tag <a> com estilo de botão e deve ser usado 
 * blank [boolean] - Configuração de abertura em nova aba. Se não definido, padrão = false
 
 ```php
-$tipo = "2";
 $conteudo['link'] = "https://www.google.com";
 $conteudo['text'] = "Acessar google";
 $conteudo['blank'] = true;
 
+// ou
+
+$conteudo = array(  
+	"link" => "https://google.com",
+	"text" => "Acessar google",
+	"blank" => true, 
+); //Recomendado
+
+$tipo = "2";
 $caixa->fillFooter($tipo, $conteudo);
 ```
+
+As cores podem ser alteradas modificando as váriaveis no css genérico.
