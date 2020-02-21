@@ -9,9 +9,14 @@ $tipo = "2";
 $conteudo = ["Cerveja|32", "Refrigerante|50"]; //Duas linhas com duas células
 $conteudo['th'] = "Produto|Estoque";
 
-$caixa->fillBody($tipo, $conteudo);
 
-print_r($tabela);
+
+$cont['link'] = "https://www.google.com";
+$cont['text'] = "ACESSAR";
+
+$caixa->fillBody($tipo, $conteudo);
+$caixa->fillFooter('2', $cont);
+print_r($cont);
 ?></pre>
 
 <!DOCTYPE html>

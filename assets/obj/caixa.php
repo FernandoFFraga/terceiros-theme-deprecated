@@ -29,8 +29,13 @@ class Caixa{
 	public function fillFooter($type, $content){
 		if ($type == '1') {
 			$this->footer = "<footer>".$content."</footer>";
+		} else if ($type == '2') {
+			if ($content['blank'] == true) {
+				$blank = "target='_blank'";
+			}
+			$this->footer = "<footer><a href='".$content['link']."' $blank>".$content['text']."</a></footer>";
 		}
-		
+
 		$this->renderDOM();
 	}
 

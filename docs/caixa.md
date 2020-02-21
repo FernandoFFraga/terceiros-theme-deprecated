@@ -4,9 +4,10 @@ Para utilizar o módulo de caixas é necessário exportar o objeto:
 require_once('assets/obj/caixa.php');
 ```
 
-E também é necessário linkar o arquivo de estilo genérico e o estilo do **[Font-awesome](https://fontawesome.com/)**:
+E também é necessário linkar o arquivo de estilo genérico e o script do **[Font-awesome](https://fontawesome.com/)**:
 ```html
 <link rel="stylesheet" href="assets/css/terceiros-theme.css">
+<script src="https://kit.fontawesome.com/b31b35b064.js"></script>
 ```
 
 ## Criação do objeto
@@ -71,4 +72,40 @@ $conteudo = ["Cerveja|32", "Refrigerante|50"]; //Duas linhas com duas células
 $conteudo['th'] = "Produto|Estoque"; // Necessário ser passado por último
 
 $caixa->fillBody($tipo, $conteudo);
+```
+
+## Preenchimento do rodapé da caixa *(Opcional)*
+Para o preenchimento do rodapé é necessário utilizar a função **fillFooter()**, e passar dois valores:
+* Tipo (Tabela disponivel a baixo)
+* Conteúdo (Pode variar de string ou array, dependendo do tipo escolhido)
+
+*obs: Se não utilizado, o rodapé não existirá*
+
+| Tipo | Descrição |
+|------|-----------|
+|  1   |   Livre   |
+|  2   |    Link   |
+
+### Tipo 1 - Livre
+Esse tipo é usado para inserir qualquer conteúdo HTML no rodapé da caixa:
+```php
+$tipo = "1";
+$html = "<span>Exemplo de rodapé</span>"; //Aqui pode ser inserido praticamente tudo
+
+$caixa->fillFooter($tipo, $html);
+```
+
+### Tipo 2 - Link
+Esse tipo é usado para criar uma tag <a> com estilo de botão e deve ser usado um array para passar três dados:
+* link  [String]  - Irá conter o link, que pode ser interno ou externo
+* text  [String]  - Irá conter a informação que irá aparecer dentro do botão 
+* blank [boolean] - Configuração de abertura em nova aba. Se não definido, padrão = false
+
+```php
+$tipo = "2";
+$conteudo['link'] = "https://www.google.com";
+$conteudo['text'] = "Acessar google";
+$conteudo['blank'] = true;
+
+$caixa->fillFooter($tipo, $conteudo);
 ```
