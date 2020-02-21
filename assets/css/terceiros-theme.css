@@ -5,13 +5,20 @@
 /* [x] Fontes */
 
 /* Variaveis */
+
 :root {
-	--calendario-destaque-bg: #ff6600;
-	--calendario-destaque-cor: #ffffff;
-	--caixa-topo-cor: #ff6600;
-	--caixa-topo-bg: #242734;
-	--caixa-footer-a-bg: #ff6600;
-	--caixa-footer-a-cor: #fff;
+	--bg-destaque: #1DBB81;
+	--bg-contraste: #242734;
+	--cor-destaque: white;
+	--cor-contraste: white;
+
+	--calendario-destaque-bg: var(--bg-destaque);
+	--calendario-destaque-cor: var(--cor-destaque);
+	--caixa-topo-cor: var(--bg-destaque);
+	--caixa-topo-cor-texto: var(--cor-contraste);
+	--caixa-topo-bg: var(--bg-contraste);
+	--caixa-footer-a-bg: var(--bg-destaque);
+	--caixa-footer-a-cor: var(--cor-destaque);
 }
 
 /* [x] Variaveis */
@@ -74,7 +81,7 @@
 	font-family: arial, sans-serif;
 	padding: 10px;
 	font-size: 24px;
-	color: #fff;
+	color: var(--caixa-topo-cor-texto);
 	text-shadow: 1px 1px 2px rgba(0,0,0,.3);
 }
 .caixa>header>span{
@@ -100,6 +107,8 @@
 
 .caixa>section{
 	padding: 15px;
+	font-family: arial, sans-serif;
+	overflow: hidden;
 }
 
 .caixa>footer{

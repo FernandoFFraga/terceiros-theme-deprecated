@@ -2,23 +2,18 @@
 
 require('assets/obj/caixa.php');
 
-$caixa = new Caixa('Caixa de teste', 'fas fa-briefcase');
+$caixa = new Caixa("Titulo", "fas fa-briefcase"); //Titulo e Icone
 
-$tipo = "2";
+$html = "<span class='customizar'>Conteúdo de exemplo</span>";
+$caixa->fillBody('1', $html); //Preencher corpo
 
-$conteudo = ["Cerveja|32", "Refrigerante|50"]; //Duas linhas com duas células
-$conteudo['th'] = "Produto|Estoque";
-
-
-$cont = array(
-	"link" => "https://google.com",
-	"text" => "Acessar Google",
-	"blank" => true, 
+$conteudo = array(  
+	"link" => "https://exemplo.com",
+	"text" => "Acessar",
 );
 
-$caixa->fillBody($tipo, $conteudo);
-$caixa->fillFooter('2', $cont);
-print_r($cont);
+$caixa->fillFooter('2', $conteudo); //Preencher rodapé
+
 ?></pre>
 
 <!DOCTYPE html>
@@ -36,7 +31,11 @@ print_r($cont);
 		}
 	</style>
 	<div class="controle">
-		<?php echo $caixa->DOM; ?>
+		<?php echo $caixa->DOM; 
+			$caixa->fillBody('1', 'aaa'); //Preencher corpo
+			echo $caixa->DOM;
+		?>
+
 	</div>
 </body>
 </html>

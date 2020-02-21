@@ -119,3 +119,29 @@ $caixa->fillFooter($tipo, $conteudo);
 ```
 
 As cores podem ser alteradas modificando as váriaveis no css genérico.
+
+## Adicionando no HTML
+Após as configurações necessárias basta dar echo na variável DOM do objeto.
+
+```php
+echo $caixa->DOM;
+```
+
+## Conclusão
+É possivel editar todos os aspectos do front-end modificando o **terceiros-theme** de acordo com sua necessidade. É possível criar ilimitadas caixas em uma mesma página e configurar elas de acordo com sua necessidade.
+
+## Exemplo completo
+```php
+$caixa = new Caixa("Titulo", "fas fa-briefcase"); //Titulo e Icone
+
+$html = "<span class='customizar'>Conteúdo de exemplo</span>";
+$caixa->fillBody('1', $html); //Preencher corpo
+
+$conteudo = array(  
+	"link" => "https://exemplo.com",
+	"text" => "Acessar",
+);
+$caixa->fillFooter('2', $conteudo); //Preencher rodapé
+
+echo $caixa->DOM; //echo da caixa final
+```

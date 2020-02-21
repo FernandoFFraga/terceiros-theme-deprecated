@@ -2,10 +2,10 @@
 
 class Caixa{
 	public $DOM;
-	public $title;
-	public $icon;
-	public $body;
-	public $footer;
+	private $title;
+	private $icon;
+	private $body;
+	private $footer;
 
 	public function __construct($title, $icon){
 		$this->title = $title;
