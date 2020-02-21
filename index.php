@@ -1,31 +1,37 @@
+<pre><?php 
+
+require('assets/obj/caixa.php');
+
+$caixa = new Caixa('Caixa de teste', 'fas fa-briefcase');
+
+$tabela = ["Fernando|Fraga", "Yan|Menezes", "Anderson|Azevedo", "Anderson|Azevedo"];
+$tabela['th'] = "Nome|Sobrenome";
+
+
+
+$foot = "aa";
+
+$caixa->fillBody('2', $tabela);
+$caixa->fillFooter('1', $foot);
+print_r($tabela);
+?></pre>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
 	<meta charset="UTF-8">
 	<title>Ambiente de teste</title>
 	<link rel="stylesheet" href="assets/css/terceiros-theme.css">
+	<script src="https://kit.fontawesome.com/b31b35b064.js"></script>
 </head>
 <body>
-<input type="text" id="input-busca">
-<table>
-	<thead>
-		<th>Código</th>
-		<th>Nome</th>
-	</thead>
-	<tr>
-		<td class="busca-numero">1</td>
-		<td class="busca-letra">Ana</td>
-	</tr>
-	<tr>
-		<td class="busca-numero">2</td>
-		<td class="busca-letra">Maria</td>
-	</tr>
-	<tr>
-		<td class="busca-numero">3</td>
-		<td class="busca-letra">João</td>
-	</tr>
-</table>
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/busca.js"></script>
+	<style>
+		.controle{
+			width: 500px;
+		}
+	</style>
+	<div class="controle">
+		<?php echo $caixa->DOM; ?>
+	</div>
 </body>
 </html>

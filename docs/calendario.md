@@ -8,12 +8,11 @@ E também é necessário linkar o arquivo de estilo:
 ```html
 <link rel="stylesheet" href="assets/css/terceiros-theme.css">
 ```
+## Criação do objeto
 É necessário de passar 3 valores na criação do objeto:
 * Dias para destaques (Devem ser passados dentro de um array de inteiros)
 * Mês (Para usar o mês atual use o valor 0 [int])
 * Ano (Para usar o ano atual use o valor 0 [int])
-
-## Criação do objeto
 
 ```php
 $array_destaques = [1, 2, 3]; //Dias que serão destacados
@@ -39,4 +38,4 @@ Para quaisquer ajustes de CSS devem ser usadas as classes:
 | Mudar estilo do prefix   | **.calendario-prefix** |
 | Mudar estilo do destaque | **.calendario-destaque** |
 
-As cores também podem ser modificadas editando as variáveis do css principal **terceiros-theme.css**. Obs: Modificando essas variáveis outros módulos também serão alterados.
+As cores também podem ser modificadas editando as variáveis do css principal **terceiros-theme.css**.
