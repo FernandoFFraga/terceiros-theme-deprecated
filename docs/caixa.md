@@ -48,7 +48,7 @@ Esse tipo é usado para facilitar a construção de tabelas no corpo da caixa. O
 #### Cabeçalho da tabela *(Opcional)*
 Caso ache necessário o usuário pode passar os dados do cabeçalho em uma única string, separando as células com **|** e alocando no espaço **th** do array de conteúdos, exemplo:
 ```php
-$conteudo['th'] = "Nome|Sobrenome|Idade"; // O objeto irá 
+$conteudo['th'] = "Nome|Sobrenome|Idade";
 ```
 
 #### Corpo da tabela
@@ -64,8 +64,11 @@ $conteudo[2] = "Anderson|Asevedo|18";
 $conteudo = ["Fernando|Fraga|18", "Yan|Menezes|19", "Anderson|Azevedo|18"]; //Recomendado
 ```
 
-Preenchimento final:
+Exemplo completo:
 ```php
 $tipo = "2";
+$conteudo['th'] = "Nome|Sobrenome|Idade";
+$conteudo = ["Fernando|Fraga|18", "Yan|Menezes|19", "Anderson|Azevedo|18"];//3 linhas com 3 cels
+
 $caixa->fillBody($tipo, $conteudo);
 ```
