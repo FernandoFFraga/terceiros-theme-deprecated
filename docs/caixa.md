@@ -36,8 +36,8 @@ Esse tipo é usado para inserir qualquer conteúdo HTML no corpo da caixa:
 ```php
 $tipo = "1";
 $html = "<div class='exemplo'>
-			<span>Exemplo</span>
-		</div>"; //Aqui pode ser inserido praticamente tudo
+		<span>Exemplo</span>
+	</div>"; //Aqui pode ser inserido praticamente tudo
 
 $caixa->fillBody($tipo, $html);
 ```
