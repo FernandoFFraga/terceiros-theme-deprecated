@@ -130,7 +130,7 @@ echo $caixa->DOM;
 ## Conclusão
 É possivel editar todos os aspectos do front-end modificando o **terceiros-theme** de acordo com sua necessidade. É possível criar ilimitadas caixas em uma mesma página e configurar elas de acordo com sua necessidade.
 
-## Exemplo completo
+### Exemplo completo
 ```php
 $caixa = new Caixa("Titulo", "fas fa-briefcase"); //Titulo e Icone
 
