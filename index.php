@@ -4,15 +4,13 @@ require('assets/obj/caixa.php');
 
 $caixa = new Caixa('Caixa de teste', 'fas fa-briefcase');
 
-$tabela = ["Fernando|Fraga", "Yan|Menezes", "Anderson|Azevedo", "Anderson|Azevedo"];
-$tabela['th'] = "Nome|Sobrenome";
+$tipo = "2";
 
+$conteudo = ["Cerveja|32", "Refrigerante|50"]; //Duas linhas com duas células
+$conteudo['th'] = "Produto|Estoque";
 
+$caixa->fillBody($tipo, $conteudo);
 
-$foot = "aa";
-
-$caixa->fillBody('2', $tabela);
-$caixa->fillFooter('1', $foot);
 print_r($tabela);
 ?></pre>
 

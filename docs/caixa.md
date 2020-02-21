@@ -67,8 +67,8 @@ $conteudo = ["Fernando|Fraga|18", "Yan|Menezes|19", "Anderson|Azevedo|18"]; //Re
 Exemplo completo:
 ```php
 $tipo = "2";
-$conteudo['th'] = "Nome|Sobrenome|Idade";
-$conteudo = ["Fernando|Fraga|18", "Yan|Menezes|19", "Anderson|Azevedo|18"];//3 linhas com 3 cels
+$conteudo = ["Cerveja|32", "Refrigerante|50"]; //Duas linhas com duas células
+$conteudo['th'] = "Produto|Estoque"; // Necessário ser passado por último
 
 $caixa->fillBody($tipo, $conteudo);
 ```
