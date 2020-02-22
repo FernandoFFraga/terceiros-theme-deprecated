@@ -1,12 +1,15 @@
 /* Fontes */
 
 @import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Staatliches');
 
 /* [x] Fontes */
 
 /* Variaveis */
 
 :root {
+	--font-geral: 'Staatliches';
+
 	--bg-destaque: #1DBB81;
 	--bg-contraste: #242734;
 	--cor-destaque: white;
@@ -78,7 +81,8 @@
 }
 .caixa>header>h2{
 	margin: 0;
-	font-family: arial, sans-serif;
+	font-family: var(--font-geral), arial, sans-serif;
+	font-weight: 500;
 	padding: 10px;
 	font-size: 24px;
 	color: var(--caixa-topo-cor-texto);
@@ -107,7 +111,7 @@
 
 .caixa>section{
 	padding: 15px;
-	font-family: arial, sans-serif;
+	font-family: var(--font-geral), arial, sans-serif;
 	overflow: hidden;
 }
 
@@ -127,7 +131,7 @@
 	padding: 5px;
 	text-align: center;
 	border: 1px solid #dee2e6;
-	font-family: arial, sans-serif;
+	font-family: var(--font-geral), arial, sans-serif;
 }
 
 .caixa-table tr:nth-child(even) { /*Comente todo o bloco para desativar o striped*/
@@ -135,8 +139,7 @@
 }
 
 .caixa-table th{
-	font-family: arial, sans-serif;
-	font-weight: 600;
+	font-family: var(--font-geral), arial, sans-serif;
 	border: solid 1px #dee2e6;
 	border-bottom-width: 2px;
 	text-align: center;
@@ -150,8 +153,7 @@
 	background-color: var(--caixa-footer-a-bg);
 	border: 1px solid rgba(0,0,0,.1);
 	padding: 10px;
-	font-family: arial, sans-serif;
-	font-weight: 600;
+	font-family: var(--font-geral), arial, sans-serif;
 	color: var(--caixa-footer-a-cor);
 	text-decoration: none;
 	text-shadow: 1px 1px 2px rgba(0,0,0,.1);
@@ -162,4 +164,66 @@
 	opacity: .9;
 	transition: all .2s ease;
 }
+
+.linha{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-end;
+	padding-bottom: 15px;
+	overflow: hidden;
+}
+
+.celula{
+	flex: 1;
+	padding-left: calc(15px / 2);
+	padding-right: calc(15px / 2);
+	overflow: hidden;
+}
+
+.celula > label{
+	font-family: var(--font-geral), arial, sans-serif;
+	font-weight: 600;
+	font-size: 22px;
+	color: #3f4356;
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.caixa section .linha:last-child{
+	padding-bottom: 0;
+}
+
+.linha > .celula:first-child{
+	padding-left: 0;
+}
+
+.linha > .celula:last-child{
+	padding-right: 0;
+}
+
+form{
+	margin: 0;
+}
 /* [X] Estilos das Caixas */
+/* Estilo de apoio */
+
+.input-generico{
+	width: 100%;
+	font-family: arial, sans-serif;
+    font-size: 16px;
+    color: #444;
+    background: rgba(0,0,0,.05);
+    padding: 10px;
+    border: solid 1px rgba(0,0,0,.2);
+    box-shadow: inset 0 0 5px rgba(0,0,0,.23);
+}
+
+.input-generico:focus{
+	outline: 0;
+}
+
+/* [X] Estilo de apoio */

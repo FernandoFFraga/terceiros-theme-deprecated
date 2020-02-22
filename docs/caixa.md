@@ -31,6 +31,7 @@ Para o preenchimento do corpo da caixa utilize a função **fillBody()** passand
 |------|-----------|
 |  1   |   Livre   |
 |  2   |   Tabela  |
+|  3   |   Formulário  |
 
 ### Tipo 1 - Livre
 Esse tipo é usado para inserir qualquer conteúdo HTML no corpo da caixa:
@@ -73,6 +74,21 @@ $conteudo['th'] = "Produto|Estoque"; // Necessário ser passado por último
 
 $caixa->fillBody($tipo, $conteudo);
 ```
+### Tipo 3 - Formulário
+Esse tipo é usado pra preencher o corpo da caixa com um formulário em grid. Os dados devem ser passados por um array com seus devidos atributos preenchidos de acordo com a finalidade do formulário.
+
+O array do formulário deve conter 3 camadas:
+
+#### Primeira camada
+A primeira camada irá conter os atributos gerais do formulário, a referência do botão de submit e a quantidade de linhas que o formulário irá ter. Segue a tabela explicativa:
+
+| Propriedade | Descrição | Default |
+|-------------|-----------|-----|
+| action | Recebe o link de action do formulário | (Em branco) |
+| method |   Recebe o method do formulário  | get |
+| buttonName | Recebe o nome do botão de submit | (Em branco) |
+| loadText | Recebe o texto que irá aparecer no botão de submit após o clique | (value do botão)|
+
 
 ## Preenchimento do rodapé da caixa *(Opcional)*
 Para o preenchimento do rodapé é necessário utilizar a função **fillFooter()**, e passar dois valores:
@@ -108,11 +124,11 @@ $conteudo['blank'] = true;
 
 // ou
 
-$conteudo = array(  
+$conteudo = [ 
 	"link" => "https://google.com",
 	"text" => "Acessar google",
 	"blank" => true, 
-); //Recomendado
+]; //Recomendado
 
 $tipo = "2";
 $caixa->fillFooter($tipo, $conteudo);
@@ -137,10 +153,10 @@ $caixa = new Caixa("Titulo", "fas fa-briefcase"); //Titulo e Icone
 $html = "<span class='customizar'>Conteúdo de exemplo</span>";
 $caixa->fillBody('1', $html); //Preencher corpo
 
-$conteudo = array(  
+$conteudo = [
 	"link" => "https://exemplo.com",
 	"text" => "Acessar",
-);
+];
 $caixa->fillFooter('2', $conteudo); //Preencher rodapé
 
 echo $caixa->DOM; //echo da caixa final

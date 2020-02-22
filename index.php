@@ -4,8 +4,57 @@ require('assets/obj/caixa.php');
 
 $caixa = new Caixa("Titulo", "fas fa-briefcase"); //Titulo e Icone
 
-$html = "<span class='customizar'>Conteúdo de exemplo</span>";
-$caixa->fillBody('1', $html); //Preencher corpo
+$conteudo = [ 
+	"action"     => "../",
+	"method"     => "post",
+	"buttonName" => "enviar",
+	"loadText"   => "Enviando...",
+	"countRows"  => 2,
+	0 => [
+		"countCels" => 2,
+		0 => [
+			"name" => "teste0",
+			"id" => "teste0",
+			"type" => "text",
+			"required" => true,
+			"autoComplete" => true,
+			"placeholder" => "input de teste",
+			"extraClass" => "teste",
+			"labelText" => "Teste",
+			"value" => "aa",
+		],
+		1 => [
+			"name" => "teste1",
+			"id" => "teste1",
+			"type" => "text",
+			"required" => true,
+			"autoComplete" => true,
+			"placeholder" => "input de teste",
+			"extraClass" => "teste",
+			"labelText" => "Teste",
+			"value" => "bb",
+		],
+	],
+	1 => [
+		"countCels" => 1,
+		0 => [
+			"name" => "teste2",
+			"id" => "teste2",
+			"type" => "text",
+			"required" => true,
+			"autoComplete" => true,
+			"placeholder" => "input de teste",
+			"extraClass" => "teste",
+			"labelText" => "Teste",
+			"value" => "cc",
+		],
+	],
+];
+
+print_r($conteudo);
+
+$caixa->fillBody('3', $conteudo); //Preencher corpo
+
 
 $conteudo = array(  
 	"link" => "https://exemplo.com",
@@ -31,11 +80,7 @@ $caixa->fillFooter('2', $conteudo); //Preencher rodapé
 		}
 	</style>
 	<div class="controle">
-		<?php echo $caixa->DOM; 
-			$caixa->fillBody('1', 'aaa'); //Preencher corpo
-			echo $caixa->DOM;
-		?>
-
+		<?php echo $caixa->DOM;?>
 	</div>
 </body>
 </html>

@@ -71,8 +71,31 @@ class Caixa{
 			}
 
 			$this->body = "<table class='caixa-table'>".$table."</table>";
+		} else if ($type == '3'){
+			$form = "<form action='".$content["action"]."' method='".$content["method"]."' onsubmit=\"this.".$content["buttonName"].".value='".$content["loadText"]."'; this.".$content["buttonName"].".disabled=true;\">";
+			for ($i=0; $i < $content["countRows"]; $i++) { 
+				$form .= "<div class='linha'>";
+					for ($m=0; $m < $content[$i]["countCels"]; $m++) {
+						if ($content[$i][$m]['required']) {
+							$required = "required";
+						} else {
+							$required = "";
+						}
+						if (!$content[$i][$m]['autoComplete']) {
+							$autocomplete = "autocomplete='off'";
+						} else {
+							$autocomplete = "";
+						}
+						$form .= "<div class='celula'>
+									<label for='".$content[$i][$m]['id']."'>".$content[$i][$m]['labelText']."</label>
+									<input class='input-generico ".$content[$i][$m]['extraClass']."' type='".$content[$i][$m]['type']."' name='".$content[$i][$m]['name']."' value='".$content[$i][$m]['value']."' ".$required." ".$autocomplete.">
+								</div>";
+					}
+				$form .= "</div>";
+			}
+			$form .= "</form>";
 		}
-
+		$this->body = $form;
 		$this->renderDOM();
 	}
 }
