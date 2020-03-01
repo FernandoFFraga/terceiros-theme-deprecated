@@ -7,8 +7,9 @@ $caixa = new Caixa("Titulo", "fas fa-briefcase"); //Titulo e Icone
 $conteudo = [ 
 	"action"     => "../",
 	"method"     => "post",
-	"buttonName" => "enviar",
+	"buttonId" => "enviar",
 	"loadText"   => "Enviando...",
+	"id"         => "form1",
 	"countRows"  => 2,
 	0 => [
 		"countCels" => 2,
@@ -51,7 +52,7 @@ $conteudo = [
 	],
 ];
 
-print_r($conteudo);
+//print_r($conteudo);
 
 $caixa->fillBody('3', $conteudo); //Preencher corpo
 
@@ -79,6 +80,7 @@ $caixa->fillFooter('2', $conteudo); //Preencher rodapé
 			width: 500px;
 		}
 	</style>
+	<input type='submit' value="bbb" id="aa">
 	<div class="controle">
 		<?php echo $caixa->DOM;?>
 	</div>

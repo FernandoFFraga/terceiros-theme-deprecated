@@ -82,12 +82,40 @@ O array do formulário deve conter 3 camadas:
 #### Primeira camada
 A primeira camada irá conter os atributos gerais do formulário, a referência do botão de submit e a quantidade de linhas que o formulário irá ter. Segue a tabela explicativa:
 
-| Propriedade | Descrição | Default |
-|-------------|-----------|-----|
+| Propriedade | Descrição | Padrão |
+|-------------|-----------|--------|
 | action | Recebe o link de action do formulário | (Em branco) |
-| method |   Recebe o method do formulário  | get |
-| buttonName | Recebe o nome do botão de submit | (Em branco) |
+| method | Recebe o method do formulário  | get |
+|   id   | Recebe o id do formulário | (Em branco) |
+| buttonId | Recebe o id do botão de submit | (Em branco) |
 | loadText | Recebe o texto que irá aparecer no botão de submit após o clique | (value do botão)|
+| countRows | Recebe a quantidade de linhas do formulário | 0 |
+
+Nessa camada será também definida por inteiros ordenadamente cada linha do formulário.
+
+### Segunda camada
+A segunda camada irá conter a quantidade de células de cada linha. Segue a tabela explicativa:
+
+| Propriedade | Descrição | Padrão |
+|-------------|-----------|--------|
+| countCels | Recebe a quantidade de células da linha | 0 |
+
+Nessa camada será também definida por inteiros ordenadamente cada célula da linha.
+
+### Terceira camada
+A terceira camada irá conter os atributos das células. Segue a tabela explicativa:
+
+| Propriedade | Descrição | Padrão |
+|-------------|-----------|--------|
+| name | Recebe o nome do input | (Em branco) |
+|  id  | Recebe o id do input | (Em branco) |
+| type | Recebe o type do input | text |
+| required | Recebe um boolean para definição do atributo | off |
+| autoComplete | Recebe um boolean para definição do atributo | on |
+| placeholder | Recebe o placeholder do input | (Em branco) |
+| extraClass | Recebe a classe auxiliar *(Opcional)* | (Em branco) |
+| labelText | Recebe o texto que irá aparecer na label (*Opcional*) | (Em branco) |
+| value | Recebe o valor que irá aparecer dentro da input (*Opcional*) |(Em branco )|
 
 
 ## Preenchimento do rodapé da caixa *(Opcional)*

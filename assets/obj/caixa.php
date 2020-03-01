@@ -34,6 +34,8 @@ class Caixa{
 				$blank = "target='_blank'";
 			}
 			$this->footer = "<footer><a href='".$content['link']."' $blank>".$content['text']."</a></footer>";
+		} else if ($type == '3'){
+			
 		}
 
 		$this->renderDOM();
@@ -72,7 +74,7 @@ class Caixa{
 
 			$this->body = "<table class='caixa-table'>".$table."</table>";
 		} else if ($type == '3'){
-			$form = "<form action='".$content["action"]."' method='".$content["method"]."' onsubmit=\"this.".$content["buttonName"].".value='".$content["loadText"]."'; this.".$content["buttonName"].".disabled=true;\">";
+			$form = "<form action='".$content["action"]."' id='".$content["id"]."' method='".$content["method"]."' onsubmit=\"".$content["buttonId"].".value='".$content["loadText"]."'; ".$content["buttonId"].".disabled=true;\">";
 			for ($i=0; $i < $content["countRows"]; $i++) { 
 				$form .= "<div class='linha'>";
 					for ($m=0; $m < $content[$i]["countCels"]; $m++) {
