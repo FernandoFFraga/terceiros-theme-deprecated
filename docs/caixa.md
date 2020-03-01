@@ -110,13 +110,14 @@ A terceira camada irá conter os atributos das células. Segue a tabela explicat
 | name | Recebe o nome do input | (Em branco) |
 |  id  | Recebe o id do input | (Em branco) |
 | type | Recebe o type do input | text |
-| required | Recebe um boolean para definição do atributo | off |
-| autoComplete | Recebe um boolean para definição do atributo | on |
+| required | Recebe um boolean para definição do atributo | false |
+| autoComplete | Recebe um boolean para definição do atributo | true |
 | placeholder | Recebe o placeholder do input | (Em branco) |
 | extraClass | Recebe a classe auxiliar *(Opcional)* | (Em branco) |
 | labelText | Recebe o texto que irá aparecer na label (*Opcional*) | (Em branco) |
 | value | Recebe o valor que irá aparecer dentro da input (*Opcional*) |(Em branco )|
 
+#### **EM DESENVOLVIMENTO**
 
 ## Preenchimento do rodapé da caixa *(Opcional)*
 Para o preenchimento do rodapé é necessário utilizar a função **fillFooter()**, e passar dois valores:
